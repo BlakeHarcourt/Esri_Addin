@@ -2,9 +2,8 @@ import arcpy
 import pythonaddins
 
 #CREATED BY:    Blake Harcourt
-#DATE CREATED:  20/11/2013
-#DATE LAST UPDATED: 25/11/2013
-#DATE LAST TESTED:  25/11/2013
+#DATE CREATED:  20/11/2015
+#DATE LAST UPDATED: 20/01/2016
 #VERSION:   0.2
 #DESCRIPTION:   This script allows for the table of contents (TOC) to be searched in Arcmap using a keyword.
                 #If a layer name matches or contains the keyword it will be turned on and counted.
@@ -35,19 +34,19 @@ class ComboBoxClass1(object):
             layer.visible = False
 
         for layer in layers:                        #SEARCHES FOR KEYWORD MATCHES
-            if layer.name == KEYWORD:               # A = A
+            if layer.name == KEYWORD:               #Example: A = A
                 layer.visible = True
                 print("Match Found")
                 COUNT = (COUNT + 1)
-            elif KEYWORD in layer.name:             #A = Apple
+            elif KEYWORD in layer.name:             #Example: A = Apple
                 layer.visible = True
                 print("Match Found")
                 COUNT = (COUNT + 1)
-            elif KEYWORD.lower() == layer.name.lower():     #a = A
+            elif KEYWORD.lower() == layer.name.lower():     #Example: a = A
                 layer.visible = True
                 print("Match Found")
                 COUNT = (COUNT + 1)
-            elif KEYWORD.lower() in layer.name.lower():     #b = aBc
+            elif KEYWORD.lower() in layer.name.lower():     #Example: b = aBc
                 layer.visible = True
                 print("Match Found")
                 COUNT = (COUNT + 1)
@@ -64,25 +63,6 @@ class ComboBoxClass1(object):
                     elif KEYWORD.lower() in subLayer.name.lower():
                         G_layer.visible = True
 
-
-
         arcpy.RefreshTOC()                          #REFRESH THE TABLE OF CONTENTS
         arcpy.RefreshActiveView()                   #REFRESH THE ACTIVE DATA FRAME
         print ("Number of Matches = "+str(COUNT))   #DISPLAY NUMBER OF MATCHES FOUND
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
