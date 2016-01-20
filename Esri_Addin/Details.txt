@@ -1,0 +1,18 @@
+Name: Table of Contents (TOC) Search Add-In for Esri ArcMap.
+
+Description:
+This script allows for the table of contents (TOC) to be searched in Arcmap using a keyword.
+If a layer name matches or contains the keyword it will be turned on and counted.
+A layer that is in a group layer will also be turned on if it matches the criteria.
+
+Install: 
+1: Double click the TOC_Search.esriaddin file to install
+2: Click install Add-In.
+3: Check it exists in Arcmap -> Customize -> Add-In Manager
+4: If not, restart Arcmap
+5: Click Customize -> Toolbars -> TOC Toolbar
+
+Usage:
+1 - Type in the text box and press enter on the keyboard.
+2 - Any layers that match will be turned on, those that don't are turned off.
+3 - Geoprocessing --> Python gives output as well displaying number of matches.
